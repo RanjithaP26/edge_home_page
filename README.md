@@ -1,2 +1,2 @@
-# edge_home_page
- 
+# knowledgechamber.io
+Home Page

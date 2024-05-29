@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page ✨🖤💙</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, Ranjitha✨</h1>
+        <p class="greeting" id="greeting"></p>
+        
+        
+        <div class="links">
+            <p class="link2">
+                <a href="https://chat.openai.com/">
+                    <img src="chatgpt-icon.png" alt="Chat GPT">
+                    Chat GPT
+                </a>
+    
+                &nbsp;&nbsp;&nbsp;
+    
+                <a href="https://www.blackbox.ai/">
+                    <img src="blackbox.png" alt="Black Box Ai">
+                    Black Box Ai
+                </a>
+            </p>
+            <p class="link2">
+              <a href="https://www.behance.net">
+                <img src="behance.png" alt="Behance">
+                Behance
+            </a>
+            &nbsp;&nbsp;&nbsp;
+
+            <a href="https://dribbble.com/">
+              <img src="dribble.png" alt="dribble">
+              Dribble
+          </a>
+            </p>
+
+            <p class="link2">
+              <a href="https://web.whatsapp.com/">
+                <img src="whatsapp.png" alt="WhatsApp">
+                WhatsApp
+            </a>
+            &nbsp;&nbsp;&nbsp;
+  
+            <a href="https://knowledgechamber.github.io/ranji/">
+              <img src="portfolio_281089.png" alt="Github">
+              Portfolio
+          </a>
+          &nbsp;&nbsp;&nbsp;
+  
+          
+            </p>
+
+      <p class="link2">
+        <a href="https://www.linkedin.com">
+          <img src="linked.png" alt="LinkedIn">
+          LinkedIn
+      </a>
+
+      &nbsp;&nbsp;&nbsp;
+
+      <a href="https://github.com">
+        <img src="git.png" alt="Github">
+        Github
+    </a>
+      
+
+      
+      </p>
+
+        </div>
+        <div class="clock" id="clock"></div>
+    </div>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            const hoursString = hours.toString().padStart(2, '0');
+            document.getElementById('clock').textContent = `${hoursString}:${minutes}:${seconds} ${ampm}`;
+            
+            let greeting;
+            if (now.getHours() < 12) {
+                greeting = "Good morning";
+            } else if (now.getHours() < 18) {
+                greeting = "Good afternoon";
+            } else {
+                greeting = "Good evening";
+            }
+            document.getElementById('greeting').textContent = greeting;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
